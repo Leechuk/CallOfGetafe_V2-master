@@ -9,7 +9,9 @@ public class EnemigoMovil : EnemigoBasico
 
     public void Start()
     {
+        base.Start();
         InvokeRepeating("Rotar", tiempoRotacion, tiempoRotacion);
+        
     }
 
     public void Update()
@@ -30,12 +32,6 @@ public class EnemigoMovil : EnemigoBasico
 
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Bala") == true)
-        {
-
-        }
-    }
+  
 
 }

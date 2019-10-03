@@ -18,6 +18,7 @@ public class Arma : MonoBehaviour
         txtBalas.text = numeroBalas.ToString();/////////////UI //añadir texto: "Balas: " + numeroBalas por ejemplo
     }
 
+    
     public void Recargar(int numeroBalasExtra)
     {
         numeroBalas = Mathf.Min(numeroBalas + numeroBalasExtra, capacidadCargador);

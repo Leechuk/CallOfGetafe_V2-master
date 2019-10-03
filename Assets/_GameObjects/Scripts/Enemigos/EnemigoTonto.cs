@@ -8,16 +8,8 @@ public class EnemigoTonto : EnemigoMovil
     AudioClip sonidoSoldado;
     AudioSource audioSource;
     
-    public void Start()
-    {
-        audioSource = GetComponent<AudioSource>();
-
-    }
-
-    public void Update()
-    {
-
-    }
+    
+    
 
     public void Explota()
     {

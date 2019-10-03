@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class CajadeMunicion : MonoBehaviour
 {
-    [SerializeField]
-    int numeroBalas;
+    [SerializeField] int numeroBalas;
 
 
     private void OnTriggerEnter(Collider other)

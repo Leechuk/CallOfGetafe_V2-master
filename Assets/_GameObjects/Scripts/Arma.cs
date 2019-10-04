@@ -12,13 +12,26 @@ public class Arma : MonoBehaviour
     [SerializeField] Text txtBalas;
     [SerializeField] int numeroBalas;
 
-    public void Start()
+
+    private void Awake()
     {
+        //Primer metodo que se invoca
+
         numeroBalas = capacidadCargador;
         txtBalas.text = numeroBalas.ToString();/////////////UI //añadir texto: "Balas: " + numeroBalas por ejemplo
     }
 
+
+
+
+    public void Start()
+    {
+        
+    }
+
     
+
+
     public void Recargar(int numeroBalasExtra)
     {
         numeroBalas = Mathf.Min(numeroBalas + numeroBalasExtra, capacidadCargador);

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Arma : MonoBehaviour
+public class ArmaOLD : MonoBehaviour
 {
     [SerializeField] GameObject bala;
     [SerializeField] Transform puntoInicioProyectil;

@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] Arma arma;
+    [SerializeField] Arma[] armas;
+    [SerializeField] int armaActiva = 0;
 
     public void Update()
     {
@@ -15,13 +16,20 @@ public class Player : MonoBehaviour
         }
     }
 
+    void ActivarArma(int numeroArma)
+    {
+
+    }
+
     void ApretarGatillo()
     {
-        arma.Disparar();
+        //arma.Disparar();
     }
 
     public void Recargar(int numeroBalas)
     {
-        arma.Recargar(numeroBalas);
+        //arma.Recargar(numeroBalas);
     }
+
+
 }

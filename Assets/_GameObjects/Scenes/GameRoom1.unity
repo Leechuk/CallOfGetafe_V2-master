@@ -2057,6 +2057,11 @@ PrefabInstance:
       propertyPath: txtBalas
       value: 
       objectReference: {fileID: 1037012515}
+    - target: {fileID: 5103517705855356178, guid: 3e2852f74a9903142baafeac00e17eee,
+        type: 3}
+      propertyPath: armas.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e2852f74a9903142baafeac00e17eee, type: 3}
 --- !u!1001 &7385163973430929726

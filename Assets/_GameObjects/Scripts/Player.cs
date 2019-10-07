@@ -14,16 +14,60 @@ public class Player : MonoBehaviour
         {
             ApretarGatillo();
         }
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            ActivarArma(0); 
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            ActivarArma(1);
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            ActivarArma(2);
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            ActivarArma(3);
+        }
+        else
+        {
+            Debug.Log("Error Tecla Incorrecta");
+        }
+
     }
 
     void ActivarArma(int numeroArma)
     {
+        if (numeroArma != armaActiva)
+        {
+            /*if(numeroArma == armaActiva) // Mala opcion
+           {
+               return;
+           }*/
+
+            //OPCION 1
+
+            armas[armaActiva].gameObject.SetActive(false);
+            armaActiva = numeroArma;
+            armas[armaActiva].gameObject.SetActive(true);
+
+            //OPCION 2
+
+            /*armaActiva = numeroArma;
+            for (int i = 0; i < armas.Length; i++)
+            {
+                armas[i].gameObject.SetActive(false);
+            }
+            armas[armaActiva].gameObject.SetActive(true);*/
+        }
+
 
     }
 
     void ApretarGatillo()
     {
-        //arma.Disparar();
+        armas[armaActiva].Disparar();
     }
 
     public void Recargar(int numeroBalas)

@@ -478,6 +478,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   armas: []
+  armaActiva: 0
 --- !u!1 &5103517706389228186
 GameObject:
   m_ObjectHideFlags: 0

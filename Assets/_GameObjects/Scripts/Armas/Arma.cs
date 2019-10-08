@@ -65,6 +65,9 @@ public abstract void Disparar();
             numeroCargadores--;
             recargando = true;
             Invoke("ReiniciarCargando", tiempoRecarga);
+            Debug.Log("Recargado");
+            audioSource.PlayOneShot(acReload);
+
 
         }
         

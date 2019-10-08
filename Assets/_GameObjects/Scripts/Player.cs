@@ -15,10 +15,13 @@ public class Player : MonoBehaviour
             ApretarGatillo();
             Debug.Log("Disparo");
         }
+
+        
         //Recarga
         if (Input.GetKeyDown(KeyCode.R))
         {
             Recargar();
+            Debug.Log("Recarga");
         }
 
         //Gestion Activacion Arma

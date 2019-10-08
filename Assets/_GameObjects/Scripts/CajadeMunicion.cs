@@ -10,11 +10,11 @@ public class CajadeMunicion : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        if (other.name == "Player")
+        if (other.name == "Arma")
         {
 
             //recargar arma
-            other.gameObject.GetComponent<Player>().Recargar();
+            other.gameObject.GetComponent<Arma>().Recargar();
             //desaparece el cubo
             Destroy(gameObject);
         }

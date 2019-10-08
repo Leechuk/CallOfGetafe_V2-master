@@ -14,7 +14,7 @@ public class CajadeMunicion : MonoBehaviour
         {
 
             //recargar arma
-            other.gameObject.GetComponent<Player>().Recargar(numeroBalas);
+            other.gameObject.GetComponent<Player>().Recargar();
             //desaparece el cubo
             Destroy(gameObject);
         }

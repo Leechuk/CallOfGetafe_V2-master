@@ -165,13 +165,14 @@ GameObject:
   - component: {fileID: 4519716788627816}
   - component: {fileID: 33705837635148522}
   - component: {fileID: 23860282398207496}
+  - component: {fileID: 114105258574877720}
   m_Layer: 0
   m_Name: AK74
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4519716788627816
 Transform:
   m_ObjectHideFlags: 0
@@ -234,6 +235,22 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &114105258574877720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487774384131766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3006ca33c246e04980188c5c9137f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cadencia: 0
+  capacidadCargador: 0
+  tiempoRecarga: 0
+  numeroCargadores: 0
 --- !u!1 &1927369336514790
 GameObject:
   m_ObjectHideFlags: 0

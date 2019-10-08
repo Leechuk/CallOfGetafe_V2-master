@@ -11,14 +11,14 @@ GameObject:
   - component: {fileID: 4523601712017382}
   - component: {fileID: 33805421945796798}
   - component: {fileID: 23697667482446966}
-  - component: {fileID: 114872083119303142}
+  - component: {fileID: 114691280829173008}
   m_Layer: 0
   m_Name: TAN_LR_Scope_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4523601712017382
 Transform:
   m_ObjectHideFlags: 0
@@ -79,7 +79,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &114872083119303142
+--- !u!114 &114691280829173008
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -88,15 +88,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1378609178869200}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9de431c8a3f9fb0458a4c4c904ffd083, type: 3}
+  m_Script: {fileID: 11500000, guid: c3006ca33c246e04980188c5c9137f60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bala: {fileID: 0}
-  puntoInicioProyectil: {fileID: 0}
-  fuerza: 0
+  cadencia: 0
   capacidadCargador: 0
-  txtBalas: {fileID: 0}
-  numeroBalas: 0
+  tiempoRecarga: 0
+  numeroCargadores: 0
 --- !u!1 &1796153942692692
 GameObject:
   m_ObjectHideFlags: 0

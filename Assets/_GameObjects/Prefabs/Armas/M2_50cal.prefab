@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4489439191758400}
-  - component: {fileID: 114579192411301484}
+  - component: {fileID: 114769441663518214}
   m_Layer: 0
   m_Name: M2_50cal
   m_TagString: Untagged
@@ -33,7 +33,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 68.761, z: 0}
---- !u!114 &114579192411301484
+--- !u!114 &114769441663518214
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,15 +42,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1156375666866002}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9de431c8a3f9fb0458a4c4c904ffd083, type: 3}
+  m_Script: {fileID: 11500000, guid: c3006ca33c246e04980188c5c9137f60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bala: {fileID: 0}
-  puntoInicioProyectil: {fileID: 0}
-  fuerza: 0
+  cadencia: 0
   capacidadCargador: 0
-  txtBalas: {fileID: 0}
-  numeroBalas: 0
+  tiempoRecarga: 0
+  numeroCargadores: 0
 --- !u!1 &1351145581268770
 GameObject:
   m_ObjectHideFlags: 0

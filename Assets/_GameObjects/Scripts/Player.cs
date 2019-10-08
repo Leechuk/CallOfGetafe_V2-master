@@ -13,66 +13,79 @@ public class Player : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             ApretarGatillo();
+            Debug.Log("Disparo");
         }
+        //Recarga
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Recargar();
+        }
+
+        //Gestion Activacion Arma
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            ActivarArma(0); 
+            ActivarArma(0);
+            Debug.Log("Arma 1");
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             ActivarArma(1);
+            Debug.Log("Arma 2");
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             ActivarArma(2);
+            Debug.Log("Arma 3");
         }
         else if (Input.GetKeyDown(KeyCode.Alpha4))
         {
-            ActivarArma(3);
+            //ActivarArma(3);
+            //Debug.Log("Arma ");
         }
-        else
-        {
-            Debug.Log("Error Tecla Incorrecta");
-        }
+        
 
     }
 
     void ActivarArma(int numeroArma)
     {
-        if (numeroArma != armaActiva)
+        if (numeroArma < armas.Length)
         {
-            /*if(numeroArma == armaActiva) // Mala opcion
-           {
-               return;
-           }*/
 
-            //OPCION 1
-
-            armas[armaActiva].gameObject.SetActive(false);
-            armaActiva = numeroArma;
-            armas[armaActiva].gameObject.SetActive(true);
-
-            //OPCION 2
-
-            /*armaActiva = numeroArma;
-            for (int i = 0; i < armas.Length; i++)
+            if (numeroArma != armaActiva)
             {
-                armas[i].gameObject.SetActive(false);
-            }
-            armas[armaActiva].gameObject.SetActive(true);*/
-        }
+                /*if(numeroArma == armaActiva) // Mala opcion
+                 {
+                     return;
+                 }*/
 
+                //OPCION 1
+
+                armas[armaActiva].gameObject.SetActive(false);
+                armaActiva = numeroArma;
+                armas[armaActiva].gameObject.SetActive(true);
+
+                //OPCION 2
+
+                /*armaActiva = numeroArma;
+                for (int i = 0; i < armas.Length; i++)
+                {
+                    armas[i].gameObject.SetActive(false);
+                }
+                armas[armaActiva].gameObject.SetActive(true);*/
+            }
+
+        } 
 
     }
 
     void ApretarGatillo()
     {
-        armas[armaActiva].Disparar();
+        armas[armaActiva].IntentarDisparar();
     }
 
-    public void Recargar(int numeroBalas)
+    public void Recargar()
     {
-        //arma.Recargar(numeroBalas);
+        armas[armaActiva].Recargar();
     }
 
 

@@ -10,13 +10,16 @@ public class EnemigoMovil : EnemigoBasico
     public void Start()
     {
         base.Start();
+        
         InvokeRepeating("Rotar", tiempoRotacion, tiempoRotacion);
         
     }
 
     public void Update()
     {
+        
         Mover();
+        base.Update();
     }
 
 

@@ -7,6 +7,16 @@ public class Player : MonoBehaviour
 {
     [SerializeField] Arma[] armas;
     [SerializeField] int armaActiva = 0;
+    [SerializeField] int vidaPlayer = 3;
+    public Text gameOverTXT ;
+
+    public void Start()
+    {
+        if (gameOverTXT.isActiveAndEnabled == true)
+        {
+            gameOverTXT.gameObject.SetActive(false);
+        }
+    }
 
     public void Update()
     {
@@ -91,6 +101,25 @@ public class Player : MonoBehaviour
         armas[armaActiva].Recargar();
     }
 
-   
+    public void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Enemigo") == true)
+        {
+            vidaPlayer--;
+            print("pierdes 1 Vida");
+
+
+            if(vidaPlayer < 1)
+            {
+                gameOverTXT.gameObject.SetActive(true);
+                this.gameObject.SetActive(false);
+                print("Has Muerto");
+            }
+
+        }
+
+
+    }
+
 
 }

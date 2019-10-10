@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class EnemigoListo : EnemigoMovil
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] int followDistance;
+    [SerializeField] float distanceToPlayer;
 
-    // Update is called once per frame
-    void Update()
+    public void Update()
     {
-        
-    }
+        base.Update();
+        distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
+        if (distanceToPlayer <= followDistance)
+        {
+            estado = ESTADO.Siguiendo;         
+            Vector3 target = new Vector3 (player.transform.position.x, transform.position.y, player.transform.position.z);
+            transform.LookAt(target);
+        }
+        else
+        {
+            estado = ESTADO.Normal;
+        }
+
+    } 
 }

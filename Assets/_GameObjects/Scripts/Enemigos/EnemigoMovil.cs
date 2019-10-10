@@ -31,8 +31,10 @@ public class EnemigoMovil : EnemigoBasico
 
     public void Rotar()
     {
-        transform.Rotate(0, Random.Range(-180, 180), 0);
-
+        if (estado != ESTADO.Siguiendo)
+        {
+            transform.Rotate(0, Random.Range(-180, 180), 0);
+        }
     }
 
   

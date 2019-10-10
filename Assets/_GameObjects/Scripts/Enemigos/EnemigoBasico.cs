@@ -4,16 +4,22 @@ using UnityEngine;
 
 public class EnemigoBasico : MonoBehaviour
 {
+    //Estado del Enemigo
+    protected enum ESTADO { Normal, Siguiendo};
+    protected ESTADO estado = ESTADO.Normal;
+    //Connfiguracion
     public int vida;
-    public int danyo;//Que inflinje el enemigo al player
+    public int danyo;//Que recibe el enemigo del player
     public GameObject prefabExplosion;
     public TextMesh textoVida;
+    protected GameObject player;
+    
 
     public static bool efectoMagia = false;
 
     public void Start()
     {
-        
+        player = GameObject.Find("Player");
         textoVida.text = vida.ToString();
     }
 
@@ -22,13 +28,13 @@ public class EnemigoBasico : MonoBehaviour
         if (efectoMagia)
         {
             RecibirDanyo(50);
-            var renderer = GetComponent<Renderer>();
-            renderer.material.SetColor("_Color", Color.red);
+           // var renderer = GetComponent<Renderer>(); //Cambiar color del material.
+           //renderer.material.SetColor("_Color", Color.red);
            
         }
     }
 
-    private void LateUpdate()
+    public void LateUpdate()
     {
         efectoMagia = false;
     }
@@ -40,6 +46,7 @@ public class EnemigoBasico : MonoBehaviour
         if (vida <= 0)
         {
             Morir();
+            print("Muere");
         }
     }
 

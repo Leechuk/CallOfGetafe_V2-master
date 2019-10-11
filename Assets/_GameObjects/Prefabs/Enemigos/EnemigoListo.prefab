@@ -523,7 +523,7 @@ GameObject:
   - component: {fileID: 65778061298248078}
   m_Layer: 0
   m_Name: EnemigoListo
-  m_TagString: Untagged
+  m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -575,7 +575,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vida: 200
   danyo: 25
-  prefabExplosion: {fileID: 0}
+  prefabExplosion: {fileID: 100004, guid: 7867af58a6ec48846ae807eb4022fbaa, type: 3}
   textoVida: {fileID: 235484334316575082}
   speed: 5
   tiempoRotacion: 2

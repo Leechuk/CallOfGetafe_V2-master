@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemigoBasico : MonoBehaviour
 {
@@ -19,8 +20,10 @@ public class EnemigoBasico : MonoBehaviour
 
     public void Start()
     {
+              
         player = GameObject.Find("Player");
         textoVida.text = vida.ToString();
+        
     }
 
     public void Update()
@@ -60,5 +63,7 @@ public class EnemigoBasico : MonoBehaviour
     {
         Instantiate(prefabExplosion, transform.position, transform.rotation);
         Destroy(gameObject);
+
+
     }
 }

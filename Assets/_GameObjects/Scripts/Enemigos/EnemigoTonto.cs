@@ -10,11 +10,4 @@ public class EnemigoTonto : EnemigoMovil
     
     
     
-
-    public void Explota()
-    {
-
-
-
-    }
 }

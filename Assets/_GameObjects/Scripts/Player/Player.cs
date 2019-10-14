@@ -7,6 +7,12 @@ public class Player : MonoBehaviour
 {
     [SerializeField] Arma[] armas;
     [SerializeField] int armaActiva = 0;
+<<<<<<< HEAD:Assets/_GameObjects/Scripts/Player/Player.cs
+    //[SerializeField] int vidaPlayer = 3;
+    
+
+    
+=======
     [SerializeField] int vidaPlayer = 3;
     public Text gameOverTXT ;
 
@@ -17,6 +23,7 @@ public class Player : MonoBehaviour
             gameOverTXT.gameObject.SetActive(false);
         }
     }
+>>>>>>> 188ab1698bc26d79af9477e422f7ab7dddd9fa93:Assets/_GameObjects/Scripts/Player.cs
 
     public void Update()
     {
@@ -101,7 +108,11 @@ public class Player : MonoBehaviour
         armas[armaActiva].Recargar();
     }
 
+<<<<<<< HEAD:Assets/_GameObjects/Scripts/Player/Player.cs
+    /*public void OnCollisionEnter(Collision collision)
+=======
     public void OnCollisionEnter(Collision collision)
+>>>>>>> 188ab1698bc26d79af9477e422f7ab7dddd9fa93:Assets/_GameObjects/Scripts/Player.cs
     {
         if (collision.gameObject.CompareTag("Enemigo") == true)
         {
@@ -111,7 +122,11 @@ public class Player : MonoBehaviour
 
             if(vidaPlayer < 1)
             {
+<<<<<<< HEAD:Assets/_GameObjects/Scripts/Player/Player.cs
+                
+=======
                 gameOverTXT.gameObject.SetActive(true);
+>>>>>>> 188ab1698bc26d79af9477e422f7ab7dddd9fa93:Assets/_GameObjects/Scripts/Player.cs
                 this.gameObject.SetActive(false);
                 print("Has Muerto");
             }
@@ -119,7 +134,11 @@ public class Player : MonoBehaviour
         }
 
 
+<<<<<<< HEAD:Assets/_GameObjects/Scripts/Player/Player.cs
+    }*/
+=======
     }
+>>>>>>> 188ab1698bc26d79af9477e422f7ab7dddd9fa93:Assets/_GameObjects/Scripts/Player.cs
 
 
 }

@@ -10,7 +10,7 @@ public class CajadeMunicion : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        if (other.name == "Arma")
+        if (other.name == "AK74")
         {
 
             //recargar arma
